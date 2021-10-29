@@ -24,10 +24,10 @@
     border: 1px solid black;
     margin: auto;
     margin-top: 25px;
-    width: 500px;
-    height: 500px;
-    display: flex;
-    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    /* display: flex;
+    justify-content: center; */
 }
 .box1{
     width: 50px;
