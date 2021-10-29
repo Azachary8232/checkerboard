@@ -9,16 +9,22 @@
 </head>
 <body>
 
-<h1 class="header">*** Checkerboard ***</h1> 
+<h1 class="header" style="background-color: {{color1}}; color: {{color2}};">*** Checkerboard ***</h1> 
 <div class="container">
     <table>
-    {% for i in range(row): %}
-        <tr>
-            {% for j in range(col): %}    
-            <td class="box{{ (i+j)%2+1 }}"></td>
+        <tbody>
+            {% for i in range(row): %}
+                <tr>
+                    {% for j in range(col): %}    
+                        {% if (i+j) % 2 == 0 %}
+                            <td class="box1" style="background-color: {{color1}};"></td>
+                        {% else %}
+                            <td class="box2" style="background-color: {{color2}};"></td>
+                        {% endif %}    
+                    {% endfor %}
+                </tr>
             {% endfor %}
-        </tr>
-    {% endfor %}
+        </tbody>
     </table>
 </div>   
 
