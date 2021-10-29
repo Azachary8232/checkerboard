@@ -12,9 +12,9 @@
 <h1 class="header">*** Checkerboard ***</h1> 
 <div class="container">
     <table>
-    {% for i in range(3): %}
+    {% for i in range(row): %}
         <tr>
-            {% for j in range(3): %}    
+            {% for j in range(col): %}    
             <td class="box{{ (i+j)%2+1 }}"></td>
             {% endfor %}
         </tr>
